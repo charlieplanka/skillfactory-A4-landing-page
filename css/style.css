@@ -727,7 +727,7 @@ footer > p {
 	}
 
 	.contact-info::after {
-		height: 238.5px;
+		height: 239px;
 	}
 
 	.contact-info::before {
@@ -738,12 +738,16 @@ footer > p {
 		left: 0;
 		transform: translateX(-100%);
 		width: 100vw;
-		height: 238.5px;
+		height: 239px;
 		background-color: #2D2D2D;
+	}
+
+	.subscription > h1 {
+		line-height: normal;
 	}
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1110px) {
 	.intro-image-link {
 		width: 100%;
 		height: auto;
@@ -761,10 +765,6 @@ footer > p {
 
 	.services-text > h1 {
 		font-size: 5vw;
-		line-height: normal;
-	}
-
-	.subscription > h1 {
 		line-height: normal;
 	}
 }
