@@ -337,7 +337,6 @@ header {
 
 .product {
     margin: 9px;
-    background-color: #4287f5;
 }
 
 /*team section*/
@@ -424,12 +423,17 @@ header {
 .employees {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	margin: 43px -11px 0px;
 }
 
 .employee {
 	margin: 0px 11px;
 	position: relative;
+}
+
+.employee > img {
+	display: block;
 }
 
 .employee-name {
@@ -705,15 +709,8 @@ footer > p {
 
 /*adaptive css*/
 @media screen and (max-width: 1365px) {
-	.product,
-	.employee,
-	.employee-name {
+	.product {
 		width: 20%;
-		height: auto;
-	}
-
-	.employee > img {
-		width: 100%;
 		height: auto;
 	}
 
@@ -744,6 +741,14 @@ footer > p {
 
 	.subscription > h1 {
 		line-height: normal;
+	}
+
+	.team > .text-and-info {
+		flex-direction: column;
+	}
+
+	.text-and-info > .team-info {
+		margin-left: 0;
 	}
 }
 
