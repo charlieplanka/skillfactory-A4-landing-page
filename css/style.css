@@ -745,6 +745,7 @@ footer > p {
 
 	.team > .text-and-info {
 		flex-direction: column;
+		align-items: center;
 	}
 
 	.text-and-info > .team-info {
