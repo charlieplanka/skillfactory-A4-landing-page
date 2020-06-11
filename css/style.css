@@ -42,7 +42,7 @@ footer,
 .services,
 .team,
 .subscription,
-.contacts
+.contacts-header
  {
 	max-width: 1249px;
 	margin-left: auto;
@@ -531,15 +531,11 @@ header {
 }
 
 /*contacts section*/
-.contacts-wrapper {
-	display: flex;
-}
-
 .contacts {
-	margin-top: 87px;
+	margin-top: 125px;
 }
 
-.contacts > h1 {
+.contacts-header > h1 {
 	font-weight: 700;
 	font-size: 41.9876px;
 	line-height: 0;
@@ -548,7 +544,7 @@ header {
 	color: #000000;
 }
 
-.contacts > p {
+.contacts-header > p {
 	margin: 58px 0 56px;
 	max-width: 752px;
 	font-weight: 400;
@@ -557,8 +553,9 @@ header {
 	color: #000000;
 }
 
-.contact-form {
+.contacts-body {
 	display: flex;
+	max-width: 100%;
 }
 
 .message-form {
@@ -566,6 +563,7 @@ header {
 	flex-wrap: wrap;
 	max-width: 750px;
 	margin-top: 75px;
+	margin-left: 64px;
 }
 
 .message-form > .mail-input,
@@ -630,6 +628,7 @@ header {
 .contact-info {
 	display: flex;
 	position: relative;
+	align-items: stretch;
 	flex-direction: column;
 	background-color: #2D2D2D;
 	margin: 75px 0 0 107px;
@@ -668,15 +667,13 @@ header {
 	margin-top: 20px;
 }
 
-.contact-info::after {
-	content: '';
-	display: block;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	transform: translateX(100%);
-	width: 100vw;
-	height: 480px;
+.contacts-empty-left-box,
+.contacts-empty-right-box {
+	flex: 1 1 auto;
+}
+
+.contacts-empty-right-box {
+	margin: 75px 0 0;
 	background-color: #2D2D2D;
 }
 
@@ -714,29 +711,13 @@ footer > p {
 		height: auto;
 	}
 
-	.contact-form {
+	.contacts-body {
 		flex-direction: column;
 	}
 
 	.contact-info {
 		padding: 20px 30px;
 		margin-left: 0;
-	}
-
-	.contact-info::after {
-		height: 239px;
-	}
-
-	.contact-info::before {
-		content: '';
-		display: block;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		transform: translateX(-100%);
-		width: 100vw;
-		height: 239px;
-		background-color: #2D2D2D;
 	}
 
 	.subscription > h1 {
@@ -929,10 +910,6 @@ footer > p {
 		padding: 20px 0;
 	}
 
-	.contact-info::before,
-	.contact-info::after {
-		display: none;
-	}
 }
 
 @media screen and (max-width: 370px) {
@@ -951,7 +928,7 @@ footer > p {
 	}
 
 	.intro .contact-button,
-	.services .learn-button, {
+	.services .learn-button {
 		font-size: 5vw;
 		width: 50%;
 	}
